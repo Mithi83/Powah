@@ -1,5 +1,8 @@
 {
   "values": {
+    "minecraft:lava": {
+      "temperature": 1000
+    },
     "minecraft:magma_block": {
       "temperature": 800
     },
