@@ -19,9 +19,11 @@ public class MC {
         return Optional.ofNullable(get().level);
     }
 
+    /*
     public static void open(Screen screen) {
         get().setScreen(screen);
     }
+    */
 
     public static Minecraft get() {
         return Minecraft.getInstance();
