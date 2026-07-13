@@ -1,9 +1,13 @@
 package owmii.powah.client.handler;
 
+import com.mojang.blaze3d.PrimitiveTopology;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import java.util.List;
+
+import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.StagedVertexBuffer;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -82,9 +86,11 @@ public class ReactorOverlayHandler {
             float g = (color >> 8 & 0xFF) / 255.0F;
             float b = (color & 0xFF) / 255.0F;
 
-            var buffers = mc.renderBuffers().bufferSource();
+            var buffers = mc.gameRenderer.renderBuffers().stagedVertexBuffer();
             var renderType = RenderTypes.createReactorOverlay(OV_TEXTURE);
-            VertexConsumer buffer = buffers.getBuffer(renderType);
+            StagedVertexBuffer.Draw draw = new StagedVertexBuffer.Draw(VertexFormat., PrimitiveTopology.QUADS, null);
+            VertexConsumer buffer = buffers.getVertexBuilder(draw);
+            /* TODO disabled
             buffer.addVertex(poseStack.last().pose(), pos.getX(), pos.getY(), pos.getZ() + 3).setColor(r, g, b, 1.0F).setUv(0.0F, 1.0F)
                     .setLight(Render.MAX_LIGHT);
             buffer.addVertex(poseStack.last().pose(), pos.getX() + 3, pos.getY(), pos.getZ() + 3).setColor(r, g, b, 1.0F).setUv(1.0F, 1.0F)
@@ -95,6 +101,7 @@ public class ReactorOverlayHandler {
                     .setLight(Render.MAX_LIGHT);
             poseStack.popPose();
             buffers.endBatch(renderType);
+            */
         }
     }
 }
