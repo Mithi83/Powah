@@ -24,7 +24,7 @@ public class CurioTagsProvider extends net.neoforged.neoforge.common.data.ItemTa
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
-        tag(CurioTags.CURIO).add(Itms.BATTERY.getAll().toArray(new Item[0]));
+        //tag(CurioTags.CURIO).add(Itms.BATTERY.getAll().toArray(new Item[0])); // TODO
     }
 
     public static class CurioTags {
