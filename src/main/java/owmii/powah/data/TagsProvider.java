@@ -26,12 +26,13 @@ public class TagsProvider {
         protected void addTags(HolderLookup.Provider provider) {
             // Remove non-dry ice if Forge handles them in the future
             tag(ITags.Blocks.ICES).addTag(ITags.Blocks.ICES_ICE).addTag(ITags.Blocks.ICES_PACKED).addTag(ITags.Blocks.ICES_BLUE);
-            tag(ITags.Blocks.ICES_ICE).add(net.minecraft.world.level.block.Blocks.ICE);
-            tag(ITags.Blocks.ICES_PACKED).add(net.minecraft.world.level.block.Blocks.PACKED_ICE);
-            tag(ITags.Blocks.ICES_BLUE).add(net.minecraft.world.level.block.Blocks.BLUE_ICE);
+            //tag(ITags.Blocks.ICES_ICE).add(net.minecraft.world.level.block.Blocks.ICE);
+            //tag(ITags.Blocks.ICES_PACKED).add(net.minecraft.world.level.block.Blocks.PACKED_ICE);
+            //tag(ITags.Blocks.ICES_BLUE).add(net.minecraft.world.level.block.Blocks.BLUE_ICE);
             tag(ITags.Blocks.ICES).addTag(ITags.Blocks.ICES_DRY);
-            tag(ITags.Blocks.ICES_DRY).add(Blcks.DRY_ICE.get());
+            //tag(ITags.Blocks.ICES_DRY).add(Blcks.DRY_ICE.get());
 
+            /*
             tag(ITags.Blocks.URANINITE_ORE).add(Blcks.URANINITE_ORE.get()).add(Blcks.URANINITE_ORE_POOR.get())
                     .add(Blcks.URANINITE_ORE_DENSE.get());
             tag(ITags.Blocks.URANINITE_ORE).add(Blcks.DEEPSLATE_URANINITE_ORE.get()).add(Blcks.DEEPSLATE_URANINITE_ORE_POOR.get())
@@ -54,7 +55,7 @@ public class TagsProvider {
 
             tag(Tags.Blocks.STORAGE_BLOCKS).add(Blcks.URANINITE.get());
             tag(ITags.Blocks.URANINITE_BLOCK).add(Blcks.URANINITE.get());
-
+*/
             varReg(ITags.Blocks.ENERGY_CELLS, Blcks.ENERGY_CELL);
             varReg(ITags.Blocks.ENDER_CELLS, Blcks.ENDER_CELL);
             varReg(ITags.Blocks.ENERGY_CABLES, Blcks.ENERGY_CABLE);
@@ -72,7 +73,7 @@ public class TagsProvider {
             // All of our blocks are mineable with a pickaxe
             for (var block : BuiltInRegistries.BLOCK) {
                 if (BuiltInRegistries.BLOCK.getKey(block).getNamespace().equals(Powah.MOD_ID)) {
-                    tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block);
+                    //tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block);
                 }
             }
             // However the uraninite ores require at least an iron pickaxe
@@ -80,7 +81,7 @@ public class TagsProvider {
         }
 
         private void varReg(TagKey<Block> tagKey, TieredBlockReg tieredBlock) {
-            tag(tagKey).add(tieredBlock.getArr());
+            //tag(tagKey).add(tieredBlock.getArr());
         }
     }
 
@@ -91,6 +92,7 @@ public class TagsProvider {
 
         @Override
         protected void addTags(HolderLookup.Provider arg) {
+            /*
             tag(ITags.Items.URANINITE_RAW).add(Itms.URANINITE_RAW.get());
             tag(Tags.Items.RAW_MATERIALS).addTag(ITags.Items.URANINITE_RAW);
 
@@ -102,7 +104,7 @@ public class TagsProvider {
             tag(ITags.Items.QUARTZ_BLOCKS).add(net.minecraft.world.item.Items.QUARTZ_BLOCK);
 
             tag(ItemTags.BOOKSHELF_BOOKS).add(Itms.BOOK.get());
-
+*/
             // BlockItem tags below
 
             // Remove non-dry ice if Forge handles them in the future
