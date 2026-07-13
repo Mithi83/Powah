@@ -1,6 +1,6 @@
 package owmii.powah.item;
 
-import guideme.GuidesCommon;
+//import guideme.GuidesCommon;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -21,7 +21,7 @@ public class PowahBookItem extends PowahBaseItem {
     @Override
     public InteractionResult use(Level worldIn, Player playerIn, InteractionHand handIn) {
         ItemStack stack = playerIn.getItemInHand(handIn);
-        GuidesCommon.openGuide(playerIn, GUIDE_ID);
+        //GuidesCommon.openGuide(playerIn, GUIDE_ID);
         return InteractionResult.SUCCESS;
     }
 }

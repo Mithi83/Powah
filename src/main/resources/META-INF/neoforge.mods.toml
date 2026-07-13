@@ -27,12 +27,12 @@ Various ways to generate, store and transmit FE power.
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.powah]]
-    modId="guideme"
-    type="REQUIRED"
-    versionRange="[21.1.7,)"
-    ordering="NONE"
-    side="BOTH"
+#[[dependencies.powah]]
+#    modId="guideme"
+#    type="REQUIRED"
+#    versionRange="[21.1.7,)"
+#    ordering="NONE"
+#    side="BOTH"
 
 [[dependencies.powah]]
     modId="jei"
