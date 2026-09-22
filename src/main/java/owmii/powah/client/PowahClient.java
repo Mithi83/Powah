@@ -1,7 +1,7 @@
 package owmii.powah.client;
 
-import guideme.Guide;
-import guideme.compiler.TagCompiler;
+//import guideme.Guide;
+//import guideme.compiler.TagCompiler;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.world.item.ItemStack;
@@ -21,7 +21,7 @@ import owmii.powah.Powah;
 import owmii.powah.block.energizing.EnergizingOrbBlock;
 import owmii.powah.block.energizing.EnergizingRecipe;
 import owmii.powah.block.energizing.EnergizingRodBlock;
-import owmii.powah.client.book.PowahTagCompiler;
+//import owmii.powah.client.book.PowahTagCompiler;
 import owmii.powah.client.handler.HudHandler;
 import owmii.powah.client.handler.ReactorOverlayHandler;
 import owmii.powah.client.model.PowahLayerDefinitions;
@@ -58,11 +58,11 @@ public final class PowahClient {
             ENERGIZING_RECIPES.addAll(event.getRecipeMap().byType(Recipes.ENERGIZING.get()));
         });
         NeoForge.EVENT_BUS.addListener((ClientPlayerNetworkEvent.LoggingOut _) -> ENERGIZING_RECIPES.clear());
-
+/*
         Guide.builder(PowahBookItem.GUIDE_ID)
                 .defaultLanguage("en_us")
                 .extension(TagCompiler.EXTENSION_POINT, new PowahTagCompiler())
-                .build();
+                .build();*/
     }
 
     private void registerRenderPipelines(RegisterRenderPipelinesEvent event) {

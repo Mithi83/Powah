@@ -1,10 +1,12 @@
 package owmii.powah.client.book;
 
+/*
 import guideme.compiler.PageCompiler;
 import guideme.compiler.TagCompiler;
 import guideme.compiler.tags.MdxAttrs;
 import guideme.document.flow.LytFlowParent;
 import guideme.libs.mdast.mdx.model.MdxJsxTextElement;
+ */
 import java.util.Set;
 import net.minecraft.network.chat.Component;
 import owmii.powah.lib.block.PowahBaseGeneratorBlock;
@@ -13,6 +15,7 @@ import owmii.powah.lib.item.EnergyItem;
 import owmii.powah.lib.item.PowahBlockItem;
 import owmii.powah.util.Util;
 
+/*
 public class PowahTagCompiler implements TagCompiler {
     @Override
     public Set<String> getTagNames() {
@@ -56,3 +59,4 @@ public class PowahTagCompiler implements TagCompiler {
         }
     }
 }
+*/
